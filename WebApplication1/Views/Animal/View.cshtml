@@ -1,0 +1,37 @@
+﻿@model Zoo_App.Models.UpdateAnimalViewModel
+     
+@{
+}
+
+<h1>Please Edit your Animal Details here</h1>
+
+<form method="post" action="View">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly> 
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Species</label>
+        <input type="text" class="form-control" asp-for="Species">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Colour</label>
+        <input type="text" class="form-control" asp-for="Colour">
+        <div class="mb-3">
+            <label for="" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" asp-for="DateOfBirth">
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <button type="submit" class="btn btn-danger"
+    asp-action="Delete"
+    asp-controller="Animal"
+    >Delete</button>
+</form>

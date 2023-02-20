@@ -1,0 +1,29 @@
+﻿@model List< WebApplication1.Models.Domain.ZooModel>
+
+@{
+}
+
+<h1>Animals</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Colour</th>
+            <th>Date Of Birth</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var animal in Model)
+        {
+            <tr>
+                <td>@animal.Name</td>
+                <td>@animal.Species</td>
+                <td>@animal.Colour</td>
+                <td>@animal.DateOfBirth.ToString("yyyy-MM-dd")</td>
+                <td><a href="Animal/View/@animal.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
